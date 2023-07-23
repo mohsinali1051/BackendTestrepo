@@ -35,7 +35,7 @@ jobs:
       - name: Build Node assets
         env:
           CI: true
-          PORT: ${{ secrets.PORT }}
+          PORT: 4000
           SITE_URL: ${{ inputs.site-url }}
         run: npm ci
 
@@ -45,7 +45,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: f41a0a55-2753-481e-93fa-6e0f12febb97
+          project-id: 2cfceb1f-dbf0-4606-8456-69b867e35543
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
