@@ -14,7 +14,7 @@ on:
         type: string
 
 env:
-  DEPLOYMENT_FOLDER: src
+  DEPLOYMENT_FOLDER: ./
 
 jobs:
 # Please do not rename this job
@@ -35,7 +35,7 @@ jobs:
       - name: Build Node assets
         env:
           CI: true
-          PORT: 3000
+          PORT: 4000
           SITE_URL: ${{ inputs.site-url }}
         run: npm ci
 
@@ -45,7 +45,7 @@ jobs:
         with:
           api-key: ${{ secrets.IONOS_API_KEY }}
           service-host: api-eu.ionos.space
-          project-id: 8a7c478f-9e0e-42d9-bd11-d59f474a3363
+          project-id: 02ef28ad-8211-4295-9ef5-8a1c35b9d622
           branch-id: ${{ inputs.branch-id }}
           version: ${{ github.sha }}
           folder: ${{ env.DEPLOYMENT_FOLDER }}
