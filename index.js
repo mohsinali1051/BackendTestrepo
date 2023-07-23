@@ -8,7 +8,7 @@ dotenv.config();
 const port = process.env.PORT; // Use the PORT environment variable or default to 3000
 
 app.get("/",(req,res)=>{
-   return res.send("Server is running")})
+   res.send("Server is running")})
 // API 1 
 app.get('/api', (req, res) => {
     return res.status(200).json({ message: 'API 1 is working!' });
