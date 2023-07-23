@@ -13,7 +13,6 @@ app.get("/",(req,res)=>{
 app.get('/api', (req, res) => {
     res.status(200).json({ message: 'API 1 is working!' });
 });
-
 // API 2 
 app.get('/apitest', (req, res) => {
     res.status(200).json({ message: 'API 2 is working!' });
